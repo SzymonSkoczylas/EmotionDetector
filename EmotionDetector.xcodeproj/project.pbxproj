@@ -13,6 +13,8 @@
 		981EB7BA2BF8D6FB00A6E129 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 981EB7B82BF8D6FB00A6E129 /* Main.storyboard */; };
 		981EB7BC2BF8D6FD00A6E129 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 981EB7BB2BF8D6FD00A6E129 /* Assets.xcassets */; };
 		981EB7BF2BF8D6FD00A6E129 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 981EB7BD2BF8D6FD00A6E129 /* LaunchScreen.storyboard */; };
+		9837FAF32C20C9D50048BA08 /* NewModel.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 9837FAF22C20C9D50048BA08 /* NewModel.mlpackage */; };
+		9837FAF72C20CF150048BA08 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9837FAF62C20CF150048BA08 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		981EB7BB2BF8D6FD00A6E129 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		981EB7BE2BF8D6FD00A6E129 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		981EB7C02BF8D6FD00A6E129 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9837FAF22C20C9D50048BA08 /* NewModel.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = NewModel.mlpackage; sourceTree = SOURCE_ROOT; };
+		9837FAF62C20CF150048BA08 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				981EB7BB2BF8D6FD00A6E129 /* Assets.xcassets */,
 				981EB7BD2BF8D6FD00A6E129 /* LaunchScreen.storyboard */,
 				981EB7C02BF8D6FD00A6E129 /* Info.plist */,
+				9837FAF22C20C9D50048BA08 /* NewModel.mlpackage */,
+				9837FAF62C20CF150048BA08 /* Extensions.swift */,
 			);
 			path = EmotionDetector;
 			sourceTree = "<group>";
@@ -138,6 +144,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9837FAF72C20CF150048BA08 /* Extensions.swift in Sources */,
+				9837FAF32C20C9D50048BA08 /* NewModel.mlpackage in Sources */,
 				981EB7B72BF8D6FB00A6E129 /* ViewController.swift in Sources */,
 				981EB7B32BF8D6FB00A6E129 /* AppDelegate.swift in Sources */,
 				981EB7B52BF8D6FB00A6E129 /* SceneDelegate.swift in Sources */,

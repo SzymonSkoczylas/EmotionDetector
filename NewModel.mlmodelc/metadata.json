@@ -1,0 +1,67 @@
+[
+  {
+    "metadataOutputVersion" : "3.0",
+    "storagePrecision" : "Float16",
+    "outputSchema" : [
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float32",
+        "formattedType" : "MultiArray (Float32)",
+        "shortDescription" : "",
+        "shape" : "[]",
+        "name" : "Identity",
+        "type" : "MultiArray"
+      }
+    ],
+    "modelParameters" : [
+
+    ],
+    "specificationVersion" : 6,
+    "mlProgramOperationTypeHistogram" : {
+      "Linear" : 3,
+      "Relu6" : 35,
+      "Cast" : 2,
+      "Conv" : 52,
+      "Pad" : 4,
+      "Relu" : 2,
+      "Add" : 10,
+      "Softmax" : 1,
+      "Transpose" : 2,
+      "ReduceMean" : 1
+    },
+    "computePrecision" : "Mixed (Float16, Float32, Int32)",
+    "isUpdatable" : "0",
+    "availability" : {
+      "macOS" : "12.0",
+      "tvOS" : "15.0",
+      "visionOS" : "1.0",
+      "watchOS" : "8.0",
+      "iOS" : "15.0",
+      "macCatalyst" : "15.0"
+    },
+    "modelType" : {
+      "name" : "MLModelType_mlProgram"
+    },
+    "userDefinedMetadata" : {
+      "com.github.apple.coremltools.version" : "7.2",
+      "com.github.apple.coremltools.source" : "tensorflow==2.12.1"
+    },
+    "inputSchema" : [
+      {
+        "dataType" : "Float32",
+        "hasShapeFlexibility" : "1",
+        "isOptional" : "0",
+        "shapeFlexibility" : "1...2 × 224 × 224 × 3",
+        "shapeRange" : "[[1, 2], [224, 224], [224, 224], [3, 3]]",
+        "formattedType" : "MultiArray (Float32 1 × 224 × 224 × 3)",
+        "type" : "MultiArray",
+        "shape" : "[1, 224, 224, 3]",
+        "name" : "input_1",
+        "shortDescription" : ""
+      }
+    ],
+    "generatedClassName" : "NewModel",
+    "method" : "predict"
+  }
+]
