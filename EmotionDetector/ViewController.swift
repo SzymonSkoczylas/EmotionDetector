@@ -78,8 +78,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             let resized = image?.resize(size: CGSize(width: 224, height: 224))
             let input = NewModelInput(input_1: (resized?.mlMultiArray())!)
             let output = try model.prediction(input: input)
-            let text = output.featureValue(for: "output")?.doubleValue
-            label.text = String(text!)
+            let text = output.featureValue(for: "Identity")?.multiArrayValue
+            label.text = text![0].stringValue
         }
         catch{
             print(error.localizedDescription)
