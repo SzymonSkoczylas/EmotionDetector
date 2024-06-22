@@ -78,8 +78,38 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             let resized = image?.resize(size: CGSize(width: 224, height: 224))
             let input = NewModelInput(input_1: (resized?.mlMultiArray())!)
             let output = try model.prediction(input: input)
-            let text = output.featureValue(for: "Identity")?.multiArrayValue
-            label.text = text![0].stringValue
+            let predictions = output.featureValue(for: "Identity")?.multiArrayValue
+            var max = 0
+            var indexOfMax = 0
+            
+            for i in 0...6
+            {
+                if(predictions![i].intValue > max)
+                {
+                    indexOfMax = i
+                    max = predictions![i].intValue
+                }
+            }
+            
+            switch indexOfMax{
+            case 0: 
+                label.text = "angry"
+            case 1: 
+                label.text = "disgust"
+            case 2: 
+                label.text = "fear"
+            case 3: 
+                label.text = "happy"
+            case 4: 
+                label.text = "neutral"
+            case 5: 
+                label.text = "sad"
+            case 6: 
+                label.text = "surprise"
+            default:
+                label.text = "neutral"
+            }
+            
         }
         catch{
             print(error.localizedDescription)
