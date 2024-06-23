@@ -79,16 +79,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             let input = NewModelInput(input_1: (resized?.mlMultiArray())!)
             let output = try model.prediction(input: input)
             let predictions = output.featureValue(for: "Identity")?.multiArrayValue
-            var max = 0
+            var max : Double = 0
             var indexOfMax = 0
             
             for i in 0...6
             {
-                if(predictions![i].intValue > max)
+                if(predictions![i].doubleValue > max)
                 {
                     indexOfMax = i
-                    max = predictions![i].intValue
+                    max = predictions![i].doubleValue
                 }
+                print(i)
+                print(predictions![i].doubleValue)
             }
             
             switch indexOfMax{
